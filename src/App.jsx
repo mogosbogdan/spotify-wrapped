@@ -82,7 +82,7 @@ const App = () => {
               justifyContent: "space-between",
             }}
           >
-            <p>{toggleSongNumber}</p>
+            <p style={{ width: "150px" }}>{toggleSongNumber}</p>
             <Switch
               checked={songsChecked}
               onChange={handleChangeNumberOfSongs}
@@ -107,7 +107,7 @@ const App = () => {
               justifyContent: "space-between",
             }}
           >
-            <p>{toggleArtistNumber}</p>
+            <p style={{ width: "150px" }}>{toggleArtistNumber}</p>
             <Switch
               checked={artistsChecked}
               onChange={handleChangeNumberOfArtists}
