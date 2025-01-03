@@ -30,9 +30,9 @@ const TopArtists = ({ numberOfArtists }) => {
       >
         Top {numberOfArtists} Artists
       </h1>
-      <ul style={{ display: "flex", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
         {topArtists.map((artist, index) => (
-          <li
+          <div
             style={{
               border: "1px solid black",
               padding: "10px",
@@ -55,9 +55,9 @@ const TopArtists = ({ numberOfArtists }) => {
             </p>
             <p>{artist}</p>
             <p>{formatTime(artistPlayTime[artist])}</p>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import TopSongs from "./TopSongs";
-import { Button } from "@mui/material";
+import { Button, Switch } from "@mui/material";
 import TopArtists from "./TopArtists";
 
 const App = () => {
@@ -8,7 +8,10 @@ const App = () => {
   const [showTopArtists, setShowTopArtists] = useState(false);
 
   const [numberOfSongs, setNumberOfSongs] = useState(100);
+  const [songsChecked, setSongsChecked] = useState(false);
+
   const [numberOfArtists, setNumberOfArtists] = useState(100);
+  const [artistsChecked, setArtistsChecked] = useState(false);
 
   const handleTopSongs = () => {
     setShowTopSongs(!showTopSongs);
@@ -18,7 +21,8 @@ const App = () => {
     setShowTopArtists(!showTopArtists);
   };
 
-  const handleChangeNumberOfSongs = () => {
+  const handleChangeNumberOfSongs = (e) => {
+    setSongsChecked(e.target.checked);
     if (numberOfSongs === 100) {
       setNumberOfSongs(5);
     } else {
@@ -26,7 +30,8 @@ const App = () => {
     }
   };
 
-  const handleChangeNumberOfArtists = () => {
+  const handleChangeNumberOfArtists = (e) => {
+    setArtistsChecked(e.target.checked);
     if (numberOfArtists === 100) {
       setNumberOfArtists(5);
     } else {
@@ -35,8 +40,14 @@ const App = () => {
   };
 
   return (
-    <div>
-      <div style={{ display: "flex", flexDirection: "row" }}>
+    <div style={{ overflowY: "scroll", overflowX: "hidden", height: "100vh" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+        }}
+      >
         <div style={{ display: "flex", flexDirection: "column" }}>
           <Button
             variant="contained"
@@ -45,12 +56,24 @@ const App = () => {
           >
             show top songs
           </Button>
-          <Button
-            variant="outlined"
-            onClick={handleChangeNumberOfSongs}
-            style={{ margin: "20px" }}
-            disabled={!showTopSongs}
-          >{`Show ${numberOfSongs === 100 ? 5 : 100} songs`}</Button>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              margin: "20px",
+              justifyContent: "space-between",
+            }}
+          >
+            <p>
+              {numberOfSongs === 100 ? "See fewer songs" : "See more songs"}
+            </p>
+            <Switch
+              checked={songsChecked}
+              onChange={handleChangeNumberOfSongs}
+              disabled={!showTopSongs}
+            />
+          </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <Button
@@ -60,12 +83,26 @@ const App = () => {
           >
             show top artists
           </Button>
-          <Button
-            variant="outlined"
-            onClick={handleChangeNumberOfArtists}
-            style={{ margin: "20px" }}
-            disabled={!showTopArtists}
-          >{`Show ${numberOfArtists === 100 ? 5 : 100} artists`}</Button>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              margin: "20px",
+              justifyContent: "space-between",
+            }}
+          >
+            <p>
+              {numberOfArtists === 100
+                ? "See fewer artists"
+                : "See more artists"}
+            </p>
+            <Switch
+              checked={artistsChecked}
+              onChange={handleChangeNumberOfArtists}
+              disabled={!showTopArtists}
+            />
+          </div>
         </div>
       </div>
       {showTopSongs && <TopSongs numberOfSongs={numberOfSongs} />}
