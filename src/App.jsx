@@ -13,6 +13,18 @@ const App = () => {
   const [numberOfArtists, setNumberOfArtists] = useState(100);
   const [artistsChecked, setArtistsChecked] = useState(false);
 
+  const moreSongs = numberOfSongs === 100;
+  const toggleSongNumber = moreSongs ? "See fewer songs" : "See more songs";
+  const toggleSongText = showTopSongs ? "Hide Top Songs" : "Show Top Songs";
+
+  const moreArtists = numberOfArtists === 100;
+  const toggleArtistNumber = moreArtists
+    ? "See fewer artists"
+    : "See more artists";
+  const toggleArtistText = showTopArtists
+    ? "Hide Top Artists"
+    : "Show Top Artists";
+
   const handleTopSongs = () => {
     setShowTopSongs(!showTopSongs);
   };
@@ -48,13 +60,18 @@ const App = () => {
           justifyContent: "center",
         }}
       >
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
           <Button
             variant="contained"
             onClick={handleTopSongs}
             style={{ margin: "20px" }}
           >
-            show top songs
+            {toggleSongText}
           </Button>
           <div
             style={{
@@ -65,9 +82,7 @@ const App = () => {
               justifyContent: "space-between",
             }}
           >
-            <p>
-              {numberOfSongs === 100 ? "See fewer songs" : "See more songs"}
-            </p>
+            <p>{toggleSongNumber}</p>
             <Switch
               checked={songsChecked}
               onChange={handleChangeNumberOfSongs}
@@ -81,7 +96,7 @@ const App = () => {
             onClick={handleTopArtists}
             style={{ margin: "20px" }}
           >
-            show top artists
+            {toggleArtistText}
           </Button>
           <div
             style={{
@@ -92,11 +107,7 @@ const App = () => {
               justifyContent: "space-between",
             }}
           >
-            <p>
-              {numberOfArtists === 100
-                ? "See fewer artists"
-                : "See more artists"}
-            </p>
+            <p>{toggleArtistNumber}</p>
             <Switch
               checked={artistsChecked}
               onChange={handleChangeNumberOfArtists}
