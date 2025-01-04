@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TopSongs from "./TopSongs";
-import { Button, Switch } from "@mui/material";
 import TopArtists from "./TopArtists";
+import { Button, Switch } from "@mui/material";
 
 const App = () => {
+  const [data, setData] = useState(null);
+
   const [showTopSongs, setShowTopSongs] = useState(false);
   const [showTopArtists, setShowTopArtists] = useState(false);
 
@@ -50,6 +52,23 @@ const App = () => {
       setNumberOfArtists(100);
     }
   };
+
+  useEffect(() => {
+    console.log("fetching data");
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://api.myjson.online/v1/records/9971a23d-2d8c-4e69-b0b2-84618136b41c"
+        );
+        const result = await response.json();
+        setData(result?.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div style={{ overflowY: "scroll", overflowX: "hidden", height: "100vh" }}>
@@ -116,8 +135,12 @@ const App = () => {
           </div>
         </div>
       </div>
-      {showTopSongs && <TopSongs numberOfSongs={numberOfSongs} />}
-      {showTopArtists && <TopArtists numberOfArtists={numberOfArtists} />}
+      {showTopSongs && data && (
+        <TopSongs data={data} numberOfSongs={numberOfSongs} />
+      )}
+      {showTopArtists && data && (
+        <TopArtists data={data} numberOfArtists={numberOfArtists} />
+      )}
     </div>
   );
 };

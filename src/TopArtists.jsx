@@ -1,25 +1,16 @@
 import React from "react";
-import data from "./db/StreamingHistory_music_0.json";
 import { formatTime } from "./utils";
 
-const TopArtists = ({ numberOfArtists }) => {
-  const artistPlayTime = {};
+const TopArtists = ({ data, numberOfArtists }) => {
+  const artistPlayTime = data.reduce((acc, item) => {
+    acc[item.artistName] = (acc[item.artistName] || 0) + item.msPlayed;
+    return acc;
+  }, {});
 
-  data.forEach((entry) => {
-    const artistName = entry.artistName;
-    const msPlayed = entry.msPlayed;
-
-    if (!artistPlayTime[artistName]) {
-      artistPlayTime[artistName] = 0;
-    }
-
-    artistPlayTime[artistName] += msPlayed;
-  });
-
-  const topArtists = Object.entries(artistPlayTime)
-    .sort((a, b) => b[1] - a[1])
+  const sortedArtists = Object.entries(artistPlayTime)
+    .sort(([, timeA], [, timeB]) => timeB - timeA)
     .slice(0, numberOfArtists)
-    .map(([artist]) => artist);
+    .map(([artist, totalPlayTime]) => ({ artist, totalPlayTime }));
 
   return (
     <div>
@@ -31,13 +22,13 @@ const TopArtists = ({ numberOfArtists }) => {
         Top {numberOfArtists} Artists
       </h1>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
-        {topArtists.map((artist, index) => (
+        {sortedArtists.map((artist, index) => (
           <div
             style={{
               border: "1px solid black",
               padding: "10px",
               borderRadius: "6px",
-              flex: "1 0 17%", // Adjust the percentage to control the number of items per row
+              flex: "1 0 17%",
               margin: "10px",
               boxSizing: "border-box",
             }}
@@ -53,8 +44,8 @@ const TopArtists = ({ numberOfArtists }) => {
             >
               {index + 1}
             </p>
-            <p>{artist}</p>
-            <p>{formatTime(artistPlayTime[artist])}</p>
+            <p>{artist.artist}</p>
+            <p>{formatTime(artist.totalPlayTime)}</p>
           </div>
         ))}
       </div>

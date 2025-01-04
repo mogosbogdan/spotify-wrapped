@@ -1,21 +1,21 @@
 import React from "react";
-import data from "./db/StreamingHistory_music_0.json";
 import { formatTime } from "./utils";
 
-const TopSongs = ({ numberOfSongs }) => {
-  const combinedData = React.useMemo(() => {
-    return data.reduce((acc, current) => {
-      const existing = acc.find((item) => item.trackName === current.trackName);
-      if (existing) {
-        existing.msPlayed += current.msPlayed;
-      } else {
-        acc.push({ ...current });
-      }
-      return acc;
-    }, []);
-  }, [data]);
+const TopSongs = ({ data, numberOfSongs }) => {
+  // Step 1: Aggregate playtime for each song
+  const aggregatedData = data.reduce((acc, item) => {
+    const key = `${item.artistName}-${item.trackName}`;
+    if (!acc[key]) {
+      acc[key] = { ...item, msPlayed: 0 };
+    }
+    acc[key].msPlayed += item.msPlayed;
+    return acc;
+  }, {});
 
-  const sortedData = combinedData.sort((a, b) => b.msPlayed - a.msPlayed);
+  // Step 2: Convert the aggregated object back to an array and sort it
+  const sortedData = Object.values(aggregatedData).sort(
+    (a, b) => b.msPlayed - a.msPlayed
+  );
 
   return (
     <>
