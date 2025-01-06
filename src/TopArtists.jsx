@@ -55,6 +55,16 @@ const TopArtists = ({ numberOfArtists }) => {
             </p>
             <p>{artist}</p>
             <p>{formatTime(artistPlayTime[artist])}</p>
+            {/* to do: add spotify iframe for top artists */}
+            {/* <iframe
+              style={{ borderRadius: "12px" }}
+              src="https://open.spotify.com/embed/artist/3y2cIKLjiOlp1Np37WiUdH?utm_source=generator"
+              width="100%"
+              height="152"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe> */}
           </div>
         ))}
       </div>
