@@ -7,20 +7,20 @@ const App = () => {
   const [showTopSongs, setShowTopSongs] = useState(false);
   const [showTopArtists, setShowTopArtists] = useState(false);
 
-  const [numberOfSongs, setNumberOfSongs] = useState(100);
+  const [numberOfSongs, setNumberOfSongs] = useState(5);
   const [songsChecked, setSongsChecked] = useState(false);
 
-  const [numberOfArtists, setNumberOfArtists] = useState(100);
+  const [numberOfArtists, setNumberOfArtists] = useState(5);
   const [artistsChecked, setArtistsChecked] = useState(false);
 
-  const moreSongs = numberOfSongs === 100;
-  const toggleSongNumber = moreSongs ? "See fewer songs" : "See more songs";
+  const moreSongs = numberOfSongs === 5;
+  const toggleSongNumber = moreSongs ? "See more songs" : "See fewer songs";
   const toggleSongText = showTopSongs ? "Hide Top Songs" : "Show Top Songs";
 
-  const moreArtists = numberOfArtists === 100;
+  const moreArtists = numberOfArtists === 5;
   const toggleArtistNumber = moreArtists
-    ? "See fewer artists"
-    : "See more artists";
+    ? "See more artists"
+    : "See fewer artists";
   const toggleArtistText = showTopArtists
     ? "Hide Top Artists"
     : "Show Top Artists";
@@ -35,19 +35,19 @@ const App = () => {
 
   const handleChangeNumberOfSongs = (e) => {
     setSongsChecked(e.target.checked);
-    if (numberOfSongs === 100) {
-      setNumberOfSongs(5);
-    } else {
+    if (numberOfSongs === 5) {
       setNumberOfSongs(100);
+    } else {
+      setNumberOfSongs(5);
     }
   };
 
   const handleChangeNumberOfArtists = (e) => {
     setArtistsChecked(e.target.checked);
-    if (numberOfArtists === 100) {
-      setNumberOfArtists(5);
-    } else {
+    if (numberOfArtists === 5) {
       setNumberOfArtists(100);
+    } else {
+      setNumberOfArtists(5);
     }
   };
 
