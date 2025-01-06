@@ -31,7 +31,7 @@ const TopSongs = ({ numberOfSongs }) => {
           return (
             <div
               style={{
-                flex: "1 0 17%", // Adjust the percentage to control the number of items per row
+                flex: "1 0 17%",
                 margin: "10px",
                 boxSizing: "border-box",
               }}
@@ -58,6 +58,15 @@ const TopSongs = ({ numberOfSongs }) => {
                 <p>{item.artistName}</p>
                 <p>{item.trackName}</p>
                 <p>{formatTime(item.msPlayed)}</p>
+                <iframe
+                  style={{ borderRadius: "12px" }}
+                  src={`https://open.spotify.com/embed/track/${item.trackUri}`}
+                  width="100%"
+                  height="152"
+                  allowfullscreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                />
               </div>
             </div>
           );
