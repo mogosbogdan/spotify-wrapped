@@ -1,6 +1,7 @@
 import React from "react";
 import data from "./db/StreamingHistory_music_0.json";
 import { formatTime } from "./utils";
+import "./index.css";
 
 const TopSongs = ({ numberOfSongs }) => {
   const combinedData = React.useMemo(() => {
@@ -22,22 +23,17 @@ const TopSongs = ({ numberOfSongs }) => {
       <h1
         style={{
           margin: "10px",
+          textAlign: "center",
         }}
       >
         Top {numberOfSongs} Songs
       </h1>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <div
+        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
+      >
         {sortedData.slice(0, numberOfSongs).map((item, index) => {
           return (
-            <div
-              style={{
-                flex: "1 0 17%",
-                margin: "10px",
-                boxSizing: "border-box",
-              }}
-              key={index}
-              className="top-songs"
-            >
+            <div key={index} className="top">
               <div
                 style={{
                   border: "1px solid black",
