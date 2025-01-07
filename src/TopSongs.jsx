@@ -55,7 +55,7 @@ const TopSongs = ({ numberOfSongs }) => {
                 <p>{item.trackName}</p>
                 <p>{formatTime(item.msPlayed)}</p>
                 <iframe
-                  style={{ borderRadius: "12px" }}
+                  style={{ border: "none" }}
                   src={`https://open.spotify.com/embed/track/${item.trackUri}`}
                   width="100%"
                   height="152"
