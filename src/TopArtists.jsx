@@ -1,6 +1,7 @@
 import React from "react";
 import data from "./db/StreamingHistory_music_0.json";
 import { formatTime } from "./utils";
+import Card from "@mui/material/Card";
 
 const TopArtists = ({ numberOfArtists }) => {
   const artistPlayTime = {};
@@ -32,9 +33,8 @@ const TopArtists = ({ numberOfArtists }) => {
       </h1>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         {topArtists.map((artist, index) => (
-          <div
-            style={{
-              border: "1px solid black",
+          <Card
+            sx={{
               padding: "10px",
               borderRadius: "6px",
               flex: "1 0 17%", // Adjust the percentage to control the number of items per row
@@ -65,7 +65,7 @@ const TopArtists = ({ numberOfArtists }) => {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             ></iframe> */}
-          </div>
+          </Card>
         ))}
       </div>
     </div>

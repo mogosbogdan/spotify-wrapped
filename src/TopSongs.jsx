@@ -2,6 +2,8 @@ import React from "react";
 import data from "./db/StreamingHistory_music_0.json";
 import { formatTime } from "./utils";
 import "./index.css";
+import Card from "@mui/material/Card";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const TopSongs = ({ numberOfSongs }) => {
   const combinedData = React.useMemo(() => {
@@ -34,9 +36,8 @@ const TopSongs = ({ numberOfSongs }) => {
         {sortedData.slice(0, numberOfSongs).map((item, index) => {
           return (
             <div key={index} className="top">
-              <div
-                style={{
-                  border: "1px solid black",
+              <Card
+                sx={{
                   padding: "10px",
                   borderRadius: "6px",
                 }}
@@ -59,11 +60,10 @@ const TopSongs = ({ numberOfSongs }) => {
                   src={`https://open.spotify.com/embed/track/${item.trackUri}`}
                   width="100%"
                   height="152"
-                  allowfullscreen=""
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"
                 />
-              </div>
+              </Card>
             </div>
           );
         })}
