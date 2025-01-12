@@ -40,6 +40,9 @@ const TopSongs = ({ numberOfSongs }) => {
                 sx={{
                   padding: "10px",
                   borderRadius: "6px",
+                  "&:hover": {
+                    backgroundColor: "#f0f0f0",
+                  },
                 }}
               >
                 <p

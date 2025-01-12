@@ -40,6 +40,9 @@ const TopArtists = ({ numberOfArtists }) => {
               flex: "1 0 17%", // Adjust the percentage to control the number of items per row
               margin: "10px",
               boxSizing: "border-box",
+              "&:hover": {
+                backgroundColor: "#f0f0f0",
+              },
             }}
             key={index}
           >
