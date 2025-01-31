@@ -41,7 +41,10 @@ const TopArtists = ({ numberOfArtists }) => {
               margin: "10px",
               boxSizing: "border-box",
               "&:hover": {
-                backgroundColor: "#f0f0f0",
+                backgroundColor: (theme) =>
+                  theme.palette.mode === "dark"
+                    ? "rgba(255, 255, 255, 0.1)"
+                    : "#f0f0f0",
               },
             }}
             key={index}

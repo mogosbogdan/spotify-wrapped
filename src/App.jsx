@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import TopSongs from "./TopSongs";
-import { Button, Switch, ThemeProvider, createTheme, CssBaseline } from "@mui/material";
+import {
+  Button,
+  Switch,
+  ThemeProvider,
+  createTheme,
+  CssBaseline,
+} from "@mui/material";
 import TopArtists from "./TopArtists";
 import "./index.css";
-import useMediaQuery from '@mui/material/useMediaQuery';
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const App = () => {
   const [showTopSongs, setShowTopSongs] = useState(false);
@@ -55,22 +61,29 @@ const App = () => {
     }
   };
 
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-  
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+
   const theme = React.useMemo(
     () =>
       createTheme({
         palette: {
-          mode: prefersDarkMode ? 'dark' : 'light',
+          mode: prefersDarkMode ? "dark" : "light",
         },
       }),
-    [prefersDarkMode],
+    [prefersDarkMode]
   );
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <div style={{ overflowY: "scroll", overflowX: "hidden", height: "100vh", backgroundColor: 'inherit' }}>
+      <div
+        style={{
+          overflowY: "scroll",
+          overflowX: "hidden",
+          height: "100vh",
+          backgroundColor: "inherit",
+        }}
+      >
         <div
           style={{
             display: "flex",
@@ -98,7 +111,7 @@ const App = () => {
                 margin: "20px",
               }}
             >
-              <p>{toggleSongNumber}</p>
+              <p style={{ margin: 0 }}>{toggleSongNumber}</p>
               <Switch
                 checked={songsChecked}
                 onChange={handleChangeNumberOfSongs}
@@ -121,7 +134,7 @@ const App = () => {
                 margin: "20px",
               }}
             >
-              <p>{toggleArtistNumber}</p>
+              <p style={{ margin: 0 }}>{toggleArtistNumber}</p>
               <Switch
                 checked={artistsChecked}
                 onChange={handleChangeNumberOfArtists}
