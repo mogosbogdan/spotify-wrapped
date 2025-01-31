@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import TopSongs from "./TopSongs";
-import { Button, Switch } from "@mui/material";
+import { Button, Switch, ThemeProvider, createTheme, CssBaseline } from "@mui/material";
 import TopArtists from "./TopArtists";
 import "./index.css";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const App = () => {
   const [showTopSongs, setShowTopSongs] = useState(false);
@@ -54,70 +55,85 @@ const App = () => {
     }
   };
 
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode: prefersDarkMode ? 'dark' : 'light',
+        },
+      }),
+    [prefersDarkMode],
+  );
+
   return (
-    <div style={{ overflowY: "scroll", overflowX: "hidden", height: "100vh" }}>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-        }}
-      >
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <div style={{ overflowY: "scroll", overflowX: "hidden", height: "100vh", backgroundColor: 'inherit' }}>
         <div
           style={{
             display: "flex",
-            flexDirection: "column",
+            flexDirection: "row",
+            justifyContent: "center",
           }}
         >
-          <Button
-            variant="contained"
-            onClick={handleTopSongs}
-            style={{ margin: "20px", height: "50px" }}
-          >
-            {toggleSongText}
-          </Button>
           <div
             style={{
               display: "flex",
-              alignItems: "center",
-              margin: "20px",
+              flexDirection: "column",
             }}
           >
-            <p>{toggleSongNumber}</p>
-            <Switch
-              checked={songsChecked}
-              onChange={handleChangeNumberOfSongs}
-              disabled={!showTopSongs}
-            />
+            <Button
+              variant="contained"
+              onClick={handleTopSongs}
+              style={{ margin: "20px", height: "50px" }}
+            >
+              {toggleSongText}
+            </Button>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                margin: "20px",
+              }}
+            >
+              <p>{toggleSongNumber}</p>
+              <Switch
+                checked={songsChecked}
+                onChange={handleChangeNumberOfSongs}
+                disabled={!showTopSongs}
+              />
+            </div>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <Button
+              variant="contained"
+              onClick={handleTopArtists}
+              style={{ margin: "20px", height: "50px" }}
+            >
+              {toggleArtistText}
+            </Button>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                margin: "20px",
+              }}
+            >
+              <p>{toggleArtistNumber}</p>
+              <Switch
+                checked={artistsChecked}
+                onChange={handleChangeNumberOfArtists}
+                disabled={!showTopArtists}
+              />
+            </div>
           </div>
         </div>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <Button
-            variant="contained"
-            onClick={handleTopArtists}
-            style={{ margin: "20px", height: "50px" }}
-          >
-            {toggleArtistText}
-          </Button>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              margin: "20px",
-            }}
-          >
-            <p>{toggleArtistNumber}</p>
-            <Switch
-              checked={artistsChecked}
-              onChange={handleChangeNumberOfArtists}
-              disabled={!showTopArtists}
-            />
-          </div>
-        </div>
+        {showTopSongs && <TopSongs numberOfSongs={numberOfSongs} />}
+        {showTopArtists && <TopArtists numberOfArtists={numberOfArtists} />}
       </div>
-      {showTopSongs && <TopSongs numberOfSongs={numberOfSongs} />}
-      {showTopArtists && <TopArtists numberOfArtists={numberOfArtists} />}
-    </div>
+    </ThemeProvider>
   );
 };
 
