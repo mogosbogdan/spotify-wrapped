@@ -6,6 +6,10 @@ import {
   ThemeProvider,
   createTheme,
   CssBaseline,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
 } from "@mui/material";
 import TopArtists from "./TopArtists";
 import "./index.css";
@@ -21,6 +25,8 @@ const App = () => {
   const [numberOfArtists, setNumberOfArtists] = useState(5);
   const [artistsChecked, setArtistsChecked] = useState(false);
 
+  const [themePreference, setThemePreference] = useState("system");
+
   const moreSongs = numberOfSongs === 5;
   const toggleSongNumber = moreSongs ? "See more songs" : "See fewer songs";
   const toggleSongText = showTopSongs ? "Hide Top Songs" : "Show Top Songs";
@@ -32,6 +38,23 @@ const App = () => {
   const toggleArtistText = showTopArtists
     ? "Hide Top Artists"
     : "Show Top Artists";
+
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode:
+            themePreference === "system"
+              ? prefersDarkMode
+                ? "dark"
+                : "light"
+              : themePreference,
+        },
+      }),
+    [prefersDarkMode, themePreference]
+  );
 
   const handleTopSongs = (e) => {
     setShowTopSongs(!showTopSongs);
@@ -61,21 +84,29 @@ const App = () => {
     }
   };
 
-  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
-
-  const theme = React.useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode: prefersDarkMode ? "dark" : "light",
-        },
-      }),
-    [prefersDarkMode]
-  );
+  const handleThemeChange = (event) => {
+    setThemePreference(event.target.value);
+  };
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <div
+        style={{ display: "flex", justifyContent: "end", alignItems: "center" }}
+      >
+        <FormControl style={{ margin: "20px" }}>
+          <InputLabel>Theme</InputLabel>
+          <Select
+            value={themePreference}
+            onChange={handleThemeChange}
+            label="Theme"
+          >
+            <MenuItem value="system">System</MenuItem>
+            <MenuItem value="light">Light</MenuItem>
+            <MenuItem value="dark">Dark</MenuItem>
+          </Select>
+        </FormControl>
+      </div>
       <div
         style={{
           overflowY: "scroll",
