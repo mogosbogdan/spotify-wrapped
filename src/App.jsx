@@ -10,7 +10,10 @@ import {
   MenuItem,
   FormControl,
   InputLabel,
+  AccordionSummary,
+  Accordion,
 } from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import TopArtists from "./TopArtists";
 import "./index.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -91,22 +94,36 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <div
-        style={{ display: "flex", justifyContent: "end", alignItems: "center" }}
-      >
-        <FormControl style={{ margin: "20px" }}>
-          <InputLabel>Theme</InputLabel>
-          <Select
-            value={themePreference}
-            onChange={handleThemeChange}
-            label="Theme"
-          >
-            <MenuItem value="system">System</MenuItem>
-            <MenuItem value="light">Light</MenuItem>
-            <MenuItem value="dark">Dark</MenuItem>
-          </Select>
-        </FormControl>
-      </div>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >
+          <div component="span">Spotify Wrapped</div>
+        </AccordionSummary>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            alignItems: "center",
+          }}
+        >
+          <FormControl style={{ margin: "20px" }}>
+            <InputLabel>Theme</InputLabel>
+            <Select
+              value={themePreference}
+              onChange={handleThemeChange}
+              label="Theme"
+            >
+              <MenuItem value="system">System</MenuItem>
+              <MenuItem value="light">Light</MenuItem>
+              <MenuItem value="dark">Dark</MenuItem>
+            </Select>
+          </FormControl>
+        </div>
+      </Accordion>
+
       <div
         style={{
           overflowY: "scroll",
