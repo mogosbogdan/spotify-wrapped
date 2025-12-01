@@ -1,0 +1,135 @@
+{
+  "topArtists": {
+    "numUniqueArtists": 442,
+    "topArtists": [
+      {
+        "artistUri": "spotify:artist:1Xyo4u8uXC1ZmMpatF05PJ"
+      },
+      {
+        "artistUri": "spotify:artist:4Gso3d4CscCijv0lmajZWs"
+      },
+      {
+        "artistUri": "spotify:artist:1RyvyyTE3xzB2ZywiAwp0i"
+      },
+      {
+        "artistUri": "spotify:artist:4xPQFgDA5M2xa0ZGo5iIsv"
+      },
+      {
+        "artistUri": "spotify:artist:3TVXtAsR1Inumwj472S9r4"
+      }
+    ],
+    "topArtistMilliseconds": 113647474,
+    "topArtistFanPercentage": 0.008134407
+  },
+  "topPodcasts": {
+    "topPodcastsUri": [
+      "spotify:show:4rOoJ6Egrf8K2IrywzwOMk"
+    ],
+    "topPodcastMilliseconds": 306203670,
+    "topPodcastPercentage": 0.0,
+    "totalPodcastMilliseconds": 306264150
+  },
+  "topTracks": {
+    "topTracks": [
+      "spotify:track:6knNhL3mIaackJvtjmUrfN",
+      "spotify:track:6XZ8C5etRn0kiS1wwuW0SO",
+      "spotify:track:6AI3ezQ4o3HUoP6Dhudph3",
+      "spotify:track:4oGnKXq6cIXoE7gfEbh5Ax",
+      "spotify:track:10OyIs6KCOmDO19J5wWFPx"
+    ],
+    "topTrackPlayCount": 47,
+    "topTrackFirstPlayedDate": "2024-01-31",
+    "distinctTracksPlayed": 789
+  },
+  "yearlyMetrics": {
+    "totalMsListened": 831355546,
+    "mostListenedDay": "2024-01-24",
+    "mostListenedDayMinutes": 275.52832,
+    "percentGreaterThanWorldwideUsers": 74.67278
+  },
+  "musicEvolution": {
+    "eras": [
+      {
+        "key": "0",
+        "peakMonth": 2,
+        "color": "yellow-blue",
+        "genre": "rap",
+        "mood": "pink pilates princess",
+        "descriptor": "shonen",
+        "pivotalArtists": [
+          "spotify:artist:1RyvyyTE3xzB2ZywiAwp0i",
+          "spotify:artist:4xPQFgDA5M2xa0ZGo5iIsv",
+          "spotify:artist:4Gso3d4CscCijv0lmajZWs"
+        ],
+        "tracks": [
+          {
+            "trackName": "CARNIVAL",
+            "trackUri": "spotify:track:3w0w2T288dec0mgeZZqoNN"
+          },
+          {
+            "trackName": "ONE CALL",
+            "trackUri": "spotify:track:6et5HwX6nTYddg7hDGAxug"
+          },
+          {
+            "trackName": "BACK TO ME",
+            "trackUri": "spotify:track:1icgLGTpX2fQXKRe4D7w2b"
+          }
+        ]
+      },
+      {
+        "key": "1",
+        "peakMonth": 3,
+        "color": "yellow-blue",
+        "genre": "alternative r&b",
+        "mood": "smooth",
+        "descriptor": "softcore",
+        "pivotalArtists": [
+          "spotify:artist:1Xyo4u8uXC1ZmMpatF05PJ",
+          "spotify:artist:7cYEt1pqMgXJdq00hAwVpT",
+          "spotify:artist:3ycxRkcZ67ALN3GQJ57Vig"
+        ],
+        "tracks": [
+          {
+            "trackName": "Swim",
+            "trackUri": "spotify:track:3M0lSi5WW79CXQamgSBIjx"
+          },
+          {
+            "trackName": "The Morning",
+            "trackUri": "spotify:track:6u0dQik0aif7FQlrhycG1L"
+          },
+          {
+            "trackName": "Mystery Lady",
+            "trackUri": "spotify:track:0bkTdkWwGk3OGFX0afD3Wj"
+          }
+        ]
+      },
+      {
+        "key": "2",
+        "peakMonth": 10,
+        "color": "red-yellow",
+        "genre": "hip hop",
+        "mood": "academic",
+        "descriptor": "clean rap",
+        "pivotalArtists": [
+          "spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg",
+          "spotify:artist:3q7HBObVc0L8jNeTe5Gofh",
+          "spotify:artist:3nFkdlSjzX9mRTtwJOzDYB"
+        ],
+        "tracks": [
+          {
+            "trackName": "Not Like Us",
+            "trackUri": "spotify:track:6AI3ezQ4o3HUoP6Dhudph3"
+          },
+          {
+            "trackName": "meet the grahams",
+            "trackUri": "spotify:track:4S8PxReB1UiDR2F5x1lyIR"
+          },
+          {
+            "trackName": "euphoria",
+            "trackUri": "spotify:track:77DRzu7ERs0TX3roZcre7Q"
+          }
+        ]
+      }
+    ]
+  }
+}

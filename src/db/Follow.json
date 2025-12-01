@@ -1,5 +1,25 @@
 {
-  "followerCount": 3,
-  "followingUsersCount": 14,
-  "dismissingUsersCount": 0
+  "userIsFollowing": [
+    "1118793649",
+    "21acfhkny3mswe2psrwpdkhua",
+    "11155280367",
+    "1264638193",
+    "21tqrdsqofs3gwmxoncogwiay",
+    "michelle_za",
+    "mkbhd",
+    "dani_ela19",
+    "Alex",
+    "1163714477",
+    "gabrieladragan",
+    "Alexandra ☄️",
+    "annaxzx",
+    "bolea.eduard"
+  ],
+  "userIsFollowedBy": [
+    "11155280367",
+    "Alex",
+    "gabrieladragan"
+  ],
+  "userIsBlocking": [
+  ]
 }

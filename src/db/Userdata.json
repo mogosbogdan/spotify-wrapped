@@ -6,9 +6,12 @@
   "facebookUid": "100000695739391",
   "birthdate": "1991-02-23",
   "gender": "male",
-  "postalCode": "10001",
+  "postalCode": null,
   "mobileNumber": null,
   "mobileOperator": null,
   "mobileBrand": null,
-  "creationTime": "2014-09-13"
+  "creationTime": "2014-09-13",
+  "assuredEstimatedAge": null,
+  "assuredAgeMethod": null,
+  "assuredAgeTimestamp": null
 }

@@ -1,0 +1,424 @@
+{
+  "stats": [
+    {
+      "date": "2025-11-17",
+      "streamCount": 0,
+      "secondsPlayed": 0,
+      "topTracks": [
+        {
+          "name": "Losing My Religion",
+          "streamCount": 2,
+          "secondsPlayed": 536
+        },
+        {
+          "name": "Make Me Proud",
+          "streamCount": 2,
+          "secondsPlayed": 437
+        },
+        {
+          "name": "Hang on to Your Love",
+          "streamCount": 2,
+          "secondsPlayed": 368
+        },
+        {
+          "name": "The Ride",
+          "streamCount": 2,
+          "secondsPlayed": 349
+        },
+        {
+          "name": "Marvins Room",
+          "streamCount": 2,
+          "secondsPlayed": 345
+        },
+        {
+          "name": "The Real Her",
+          "streamCount": 2,
+          "secondsPlayed": 319
+        },
+        {
+          "name": "Every Little Thing I Do",
+          "streamCount": 2,
+          "secondsPlayed": 259
+        },
+        {
+          "name": "Cameras / Good Ones Go Interlude - Medley",
+          "streamCount": 1,
+          "secondsPlayed": 433
+        },
+        {
+          "name": "Welcome To My Hood - Remix",
+          "streamCount": 1,
+          "secondsPlayed": 430
+        },
+        {
+          "name": "Money Can't Buy You Love",
+          "streamCount": 1,
+          "secondsPlayed": 360
+        }
+      ],
+      "topArtists": [
+        {
+          "name": "Drake",
+          "streamCount": 31,
+          "secondsPlayed": 6441
+        },
+        {
+          "name": "Rick Ross",
+          "streamCount": 7,
+          "secondsPlayed": 2082
+        },
+        {
+          "name": "Die Antwoord",
+          "streamCount": 4,
+          "secondsPlayed": 512
+        },
+        {
+          "name": "Tory Lanez",
+          "streamCount": 4,
+          "secondsPlayed": 461
+        },
+        {
+          "name": "Lil Wayne",
+          "streamCount": 7,
+          "secondsPlayed": 1446
+        },
+        {
+          "name": "Travis Scott",
+          "streamCount": 4,
+          "secondsPlayed": 910
+        },
+        {
+          "name": "DJ Khaled",
+          "streamCount": 3,
+          "secondsPlayed": 909
+        },
+        {
+          "name": "Snoop Dogg",
+          "streamCount": 3,
+          "secondsPlayed": 744
+        },
+        {
+          "name": "Wu-Tang Clan",
+          "streamCount": 3,
+          "secondsPlayed": 397
+        },
+        {
+          "name": "Kanye West",
+          "streamCount": 2,
+          "secondsPlayed": 652
+        }
+      ],
+      "topGenres": [
+      ]
+    },
+    {
+      "date": "2025-11-10",
+      "streamCount": 0,
+      "secondsPlayed": 0,
+      "topTracks": [
+        {
+          "name": "Don't Walk Away",
+          "streamCount": 5,
+          "secondsPlayed": 648
+        },
+        {
+          "name": "Losing My Religion",
+          "streamCount": 4,
+          "secondsPlayed": 959
+        },
+        {
+          "name": "wgft (feat. Burna Boy)",
+          "streamCount": 4,
+          "secondsPlayed": 736
+        },
+        {
+          "name": "ON N OFF",
+          "streamCount": 4,
+          "secondsPlayed": 585
+        },
+        {
+          "name": "Tiramisu",
+          "streamCount": 4,
+          "secondsPlayed": 552
+        },
+        {
+          "name": "Miami (feat. Lil Wayne & Rick Ross)",
+          "streamCount": 3,
+          "secondsPlayed": 651
+        },
+        {
+          "name": "Hang on to Your Love",
+          "streamCount": 3,
+          "secondsPlayed": 561
+        },
+        {
+          "name": "Sugar On My Tongue",
+          "streamCount": 3,
+          "secondsPlayed": 459
+        },
+        {
+          "name": "Can We Talk",
+          "streamCount": 2,
+          "secondsPlayed": 559
+        },
+        {
+          "name": "Action",
+          "streamCount": 2,
+          "secondsPlayed": 376
+        }
+      ],
+      "topArtists": [
+        {
+          "name": "Don Toliver",
+          "streamCount": 14,
+          "secondsPlayed": 2012
+        },
+        {
+          "name": "JAY-Z",
+          "streamCount": 6,
+          "secondsPlayed": 1334
+        },
+        {
+          "name": "Morgan Wallen",
+          "streamCount": 6,
+          "secondsPlayed": 1236
+        },
+        {
+          "name": "Drake",
+          "streamCount": 6,
+          "secondsPlayed": 952
+        },
+        {
+          "name": "Future",
+          "streamCount": 6,
+          "secondsPlayed": 973
+        },
+        {
+          "name": "Kanye West",
+          "streamCount": 8,
+          "secondsPlayed": 1808
+        },
+        {
+          "name": "Sade",
+          "streamCount": 5,
+          "secondsPlayed": 1061
+        },
+        {
+          "name": "Jade",
+          "streamCount": 5,
+          "secondsPlayed": 648
+        },
+        {
+          "name": "Gunna",
+          "streamCount": 5,
+          "secondsPlayed": 920
+        },
+        {
+          "name": "R.E.M.",
+          "streamCount": 4,
+          "secondsPlayed": 959
+        }
+      ],
+      "topGenres": [
+      ]
+    },
+    {
+      "date": "2025-11-03",
+      "streamCount": 0,
+      "secondsPlayed": 0,
+      "topTracks": [
+        {
+          "name": "Losing My Religion",
+          "streamCount": 6,
+          "secondsPlayed": 1567
+        },
+        {
+          "name": "Money Can't Buy You Love",
+          "streamCount": 2,
+          "secondsPlayed": 720
+        },
+        {
+          "name": "MEET YOUR PADRE",
+          "streamCount": 2,
+          "secondsPlayed": 542
+        },
+        {
+          "name": "ON N OFF",
+          "streamCount": 2,
+          "secondsPlayed": 293
+        },
+        {
+          "name": "Jerry Sprunger (with T-Pain)",
+          "streamCount": 2,
+          "secondsPlayed": 232
+        },
+        {
+          "name": "Champagne Poetry",
+          "streamCount": 1,
+          "secondsPlayed": 335
+        },
+        {
+          "name": "Tell Your Friends",
+          "streamCount": 1,
+          "secondsPlayed": 334
+        },
+        {
+          "name": "Frank Lucas (feat. Benny the Butcher)",
+          "streamCount": 1,
+          "secondsPlayed": 281
+        },
+        {
+          "name": "Sensitivity",
+          "streamCount": 1,
+          "secondsPlayed": 281
+        },
+        {
+          "name": "Can't Be Wasting My Time - One Dread One Ball Head Version",
+          "streamCount": 1,
+          "secondsPlayed": 274
+        }
+      ],
+      "topArtists": [
+        {
+          "name": "Benny The Butcher",
+          "streamCount": 14,
+          "secondsPlayed": 2936
+        },
+        {
+          "name": "Drake",
+          "streamCount": 9,
+          "secondsPlayed": 1799
+        },
+        {
+          "name": "R.E.M.",
+          "streamCount": 6,
+          "secondsPlayed": 1567
+        },
+        {
+          "name": "The Weeknd",
+          "streamCount": 7,
+          "secondsPlayed": 1469
+        },
+        {
+          "name": "Morgan Wallen",
+          "streamCount": 4,
+          "secondsPlayed": 656
+        },
+        {
+          "name": "Travis Scott",
+          "streamCount": 6,
+          "secondsPlayed": 1026
+        },
+        {
+          "name": "Metro Boomin",
+          "streamCount": 4,
+          "secondsPlayed": 807
+        },
+        {
+          "name": "Westside Gunn",
+          "streamCount": 4,
+          "secondsPlayed": 730
+        },
+        {
+          "name": "Ralph Tresvant",
+          "streamCount": 3,
+          "secondsPlayed": 1001
+        },
+        {
+          "name": "Future",
+          "streamCount": 4,
+          "secondsPlayed": 859
+        }
+      ],
+      "topGenres": [
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "date": "2025-11-23",
+      "highlightType": "YOU_STAND_OUT",
+      "youStandOutHighlight": {
+        "entity": "Drake",
+        "country": "RO",
+        "secondsPlayed": 6441,
+        "marketAvgSecondsPlayed": 1350.1306
+      }
+    },
+    {
+      "date": "2025-11-16",
+      "highlightType": "ON_REPEAT",
+      "onRepeatHighlight": {
+        "entity": "Don't Walk Away",
+        "streamCount": 5
+      }
+    },
+    {
+      "date": "2025-11-09",
+      "highlightType": "FIRST_TO_DISCOVER",
+      "firstToDiscoverHighlight": {
+        "entity": "Graveyard Whistling",
+        "country": "RO",
+        "position": 1058
+      }
+    },
+    {
+      "date": "2025-11-02",
+      "highlightType": "UNLIKE_COMBINATION",
+      "unlikeCombinationHighlight": {
+        "firstEntity": "Rich or Not",
+        "secondEntity": "Missing - Todd Terry Club Mix / US Radio Edit"
+      }
+    },
+    {
+      "date": "2025-10-26",
+      "highlightType": "FIRST_TO_DISCOVER",
+      "firstToDiscoverHighlight": {
+        "entity": "Pipe Down (feat. Travis Scott)",
+        "country": "RO",
+        "position": 1986
+      }
+    },
+    {
+      "date": "2025-10-19",
+      "highlightType": "STREAKS",
+      "streaksHighlight": {
+        "entity": "Blinding Lights",
+        "dayStreaks": 3
+      }
+    },
+    {
+      "date": "2025-10-12",
+      "highlightType": "STREAKS",
+      "streaksHighlight": {
+        "entity": "Tyler, The Creator",
+        "dayStreaks": 7
+      }
+    },
+    {
+      "date": "2025-10-05",
+      "highlightType": "ON_REPEAT",
+      "onRepeatHighlight": {
+        "entity": "Losing My Religion",
+        "streamCount": 11
+      }
+    },
+    {
+      "date": "2025-09-28",
+      "highlightType": "FIRST_TO_DISCOVER",
+      "firstToDiscoverHighlight": {
+        "entity": "Walk Down (feat. 21 Savage)",
+        "country": "RO",
+        "position": 4591
+      }
+    },
+    {
+      "date": "2025-09-21",
+      "highlightType": "PROPORTION_LISTENING_ENTITY",
+      "proportionListeningHighlight": {
+        "entity": "SSK",
+        "listeningPercentage": 39.36883899233297
+      }
+    }
+  ]
+}
